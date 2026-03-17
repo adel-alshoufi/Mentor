@@ -1,0 +1,104 @@
+.trainers {
+    padding: 80px 0;
+    background: #f6f9fe;
+}
+
+.trainers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.trainer-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s;
+}
+
+.trainer-card:hover {
+    transform: translateY(-5px);
+}
+
+.trainer-img {
+    position: relative;
+    overflow: hidden;
+}
+
+.trainer-img img {
+    width: 100%;
+    height: 280px;
+    object-fit: cover;
+    object-position: top;
+    transition: transform 0.4s;
+}
+
+.trainer-card:hover .trainer-img img {
+    transform: scale(1.05);
+}
+
+.trainer-social {
+    position: absolute;
+    bottom: -50px;
+    left: 0;
+    right: 0;
+    background: rgba(95, 207, 128, 0.9);
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 12px;
+    transition: bottom 0.3s;
+}
+
+.trainer-card:hover .trainer-social {
+    bottom: 0;
+}
+
+.trainer-social a {
+    color: #fff;
+    font-size: 16px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transition: background 0.3s;
+}
+
+.trainer-social a:hover {
+    background: rgba(255, 255, 255, 0.4);
+}
+
+.trainer-info {
+    padding: 18px 20px;
+    text-align: center;
+}
+
+.trainer-info h4 {
+    font-family: 'Raleway', sans-serif;
+    font-size: 18px;
+    font-weight: 700;
+    color: #1a1a2e;
+    margin-bottom: 5px;
+}
+
+.trainer-info span {
+    font-size: 13px;
+    color: #5fcf80;
+    font-weight: 600;
+}
+
+@media (max-width: 992px) {
+    .trainers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .trainers-grid {
+        grid-template-columns: 1fr;
+    }
+}
